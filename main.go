@@ -5,6 +5,8 @@ import "fmt"
 func main() {
 	colors := map[string]string {
 		"white": "#ffffff",
+		"red": "#ff0000",
+		"black": "#000000",
 	}
 	fmt.Println(colors)
 
@@ -20,10 +22,12 @@ func main() {
 	colors2["white"] = "white"
 	fmt.Println(colors2)
 
-	colors["white"] = "white"
-	fmt.Println(colors)
-
 	// Delete a field from map
-	delete(colors, "white")
-	fmt.Println(colors)
+	delete(colors2, "white")
+	fmt.Println(colors2)
+
+	// Iterate over map
+	for color, hex := range colors {
+		fmt.Println("Hex of", color, "is", hex)
+	}
 }
