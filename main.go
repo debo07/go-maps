@@ -22,4 +22,8 @@ func main() {
 
 	colors["white"] = "white"
 	fmt.Println(colors)
+
+	// Delete a field from map
+	delete(colors, "white")
+	fmt.Println(colors)
 }
